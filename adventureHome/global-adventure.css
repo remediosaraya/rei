@@ -1,0 +1,8 @@
+.site-header{background: url(images/headImg.png)!important;color: #fff; position: relative; z-index: 1000;}
+.site-header .site-header-logo{ width: 140px; margin-right: 10px; }
+.site-header .site-header-logo .svg-logo{ fill:#fff; width: 140px; margin:-15px 0 0;}
+.site-header .site-header-body {margin-left: 150px;}
+.site-header .header-nav-container {bottom: 25px;}
+.site-header .header-contact{display: block; position: relative; width: 100%; margin: 5px 0; min-height: 20px;}
+.site-header .header-contact ul li{margin: 0 5px;}
+.site-header .header-contact ul li a{font-weight: bold;}

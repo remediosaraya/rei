@@ -1,0 +1,391 @@
+/* -------------------------------------------------------------------------------------------- */
+
+/* -----------------------------  basic page settings and fixes  ------------------------------ */
+
+/* -------------------------------------------------------------------------------------------- */
+.rei-page-content {
+   padding-left: 3rem;
+   padding-right: 3rem;
+}
+
+/* makes modal links on <a> elements clickable */
+.rei-page-content [data-toggle="modal"] {
+   cursor: pointer;
+}
+
+/* replace with text-hide once changes merged and delete */
+.rei-page-content .ohp-text-hide {
+   height: 1px;
+   width: 1px;
+   position: absolute;
+   overflow: hidden;
+   top: -1rem;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+/* -------------------------  layout tools and outlet-special classes ------------------------- */
+
+/* -------------------------------------------------------------------------------------------- */
+.rei-page-content .text-red {
+   color: #C00;
+}
+.rei-page-content .text-white {
+   color: #fff;
+}
+.rei-page-content .ohp-lh-1 {
+   line-height: 1;
+}
+.rei-page-content .ohp-lh-0 {
+   line-height: .8;
+}
+.rei-page-content .nowrap {
+   display: inline-block;
+}
+
+/* top/bottom margin resets */
+.rei-page-content .ohp-clear {
+   margin: 0;
+   padding: 0;
+   display: block;
+}
+.rei-page-content .ohp-clear-top {
+   margin-top: 0;
+   padding-top: 0;
+}
+.rei-page-content .ohp-clear-bottom {
+   margin-bottom: 0;
+   padding-bottom: 0;
+}
+
+/* l/r margins and padding - adjustments */
+.rei-page-content .row.no-gutters {
+   margin-right: 0;
+   margin-left: 0;
+}
+.rei-page-content *[class*="col-"].no-gutters {
+   padding-right: 0;
+   padding-left: 0;
+}
+.rei-page-content *[class*="col-"].no-gutters-l {
+   padding-left: 0;
+}
+.rei-page-content *[class*="col-"].no-gutters-r {
+   padding-right: 0;
+}
+.rei-page-content *[class*="col-"].sm-gutters {
+   padding-right: 2rem;
+   padding-left: 2rem
+}
+.rei-page-content *[class*="col-"].xs-gutters {
+   padding-right: 1rem;
+   padding-left: 1rem
+}
+.rei-page-content *[class*="col-"].sm-gutters-l {
+   padding-left: 2rem
+}
+.rei-page-content *[class*="col-"].sm-gutters-r {
+   padding-right: 2rem;
+}
+.rei-page-content *[class*="col-"].xs-gutters-l {
+   padding-left: 1rem
+}
+.rei-page-content *[class*="col-"].xs-gutters-r {
+   padding-right: 1rem
+}
+
+/* ---------------------------------  image centering tool  --------------------------------- */
+
+/* ------------------------------- used in dotd, dotw, big box -------------------------------*/
+.rei-page-content .ohp-product-tile .ohp-img-container, .recommendations-component.rei-recs .ohp-product-tile .ohp-img-container {
+   padding-bottom: 100%;
+   overflow: hidden;
+   position: relative;
+}
+.rei-page-content .ohp-product-tile .ohp-img-container .ohp-result-image, .recommendations-component.rei-recs .ohp-product-tile .ohp-img-container .ohp-result-image {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   max-height: 100%;
+   max-width: 100%;
+   -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%);
+   -o-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+   max-width: 100%;
+}
+
+/* --------------------------------- vertical centering tool --------------------------------- */
+
+/* ------------------ used in dotd, dotw - doesn't collapse text elements -------------------- */
+
+.rei-page-content .ohp-valign-outer {
+   height: 100%;
+}
+.rei-page-content .ohp-valign-inner {
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+   -ms-transform: translateY(-50%);
+}
+.rei-page-content .ohp-valign-inner {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+.rei-page-content .ohp-valign-inner:first-child {
+   margin-top: 0;
+}
+.rei-page-content .ohp-valign-inner:last-child {
+   margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+
+/* ---------------------------------  specific page sections  --------------------------------- */
+
+/* -------------------------------------------------------------------------------------------- */
+
+/* --------------------------------- LEFT NAV --------------------------------- */
+.rei-page-content .ohp-left-nav .link_header-outlet:focus, .rei-page-content .ohp-left-nav .link_header-outlet:hover {
+   text-decoration: none;
+}
+
+/* brand test */
+.rei-page-content .ohp-left-nav-brands .nav-gutters-l {
+   padding-left: 1.3rem;
+}
+.rei-page-content .ohp-left-nav-brands .nav-gutters-r {
+   padding-right: 1.3rem;
+}
+.rei-page-content .ohp-left-nav-brands .img-responsive {
+   border: solid 1px #e5e5e5;
+}
+
+/* --------------------------------- DOTD/DOTW --------------------------------- */
+
+/* dotd dollar/percent test */
+.rei-page-content .ohp-dotd-dollar {
+   display: none;
+}
+
+/* dotd sold out state */
+.rei-page-content .ohp-dotd .sold-out-overlay {
+   display: none;
+   position: absolute;
+   opacity: 0.8;
+   background-color: #FFF;
+   width: 100%;
+   height: 100%;
+   z-index: 100;
+}
+.rei-page-content .ohp-dotd .sold-out-overlay h3 {
+   padding-right: 2rem;
+   padding-left: 2rem;
+   z-index: 101;
+}
+.rei-page-content *[class*="col-"].ohp-dotw-right {
+   padding-right: 1.3rem;
+}
+.rei-page-content *[class*="col-"].ohp-dotw-left {
+   padding-left: 1.3rem
+}
+
+/* dotw sold out state */
+.rei-page-content .ohp-dotw .ohp-dotw-fail {
+   display: none;
+}
+.rei-page-content .ohp-dotw .ohp-dotw-overlay {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 100;
+   background-color: #efeee2;
+}
+.rei-page-content .ohp-dotw .ohp-dotw-fail h3 {
+   padding-right: 2rem;
+   padding-left: 2rem;
+   z-index: 200;
+}
+.rei-page-content .ohp-dotw .ohp-dotw-fail .oph-result-image {
+   visibility: hidden;
+}
+
+/* --------------------------------- BIG BOX - NEW ARRIVALS, JUST REDUCED --------------------------------- */
+.rei-page-content .js-just-reduced {
+   display: none;
+}
+.rei-page-content .big-box-tiles {
+   position: relative;
+   display: block;
+}
+.rei-page-content .big-box-tiles a {
+   display: block;
+   color: #222;
+   font-family: "Interstate Bold Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   margin-bottom: 8px;
+}
+.rei-page-content .big-box .sold-out-overlay {
+   display: none;
+}
+
+/* making recommendations match the rest of the page (also media hacks below for small sizes) */
+.rei-page-content .recommendations-component .ohp-product-tile .product-description {
+   max-width: 100%;
+}
+.rei-page-content .recommendations-component .ohp-product-tile .product-title {
+   display: block;
+}
+
+/* --------------------------------- MEDIA QUERIES --------------------------------- */
+
+/* --------------------------------- md and up--------------------------------- */
+@media (min-width:992px) {
+   .rei-page-content *[class*="col-"].no-gutters-md {
+      padding-right: 0;
+      padding-left: 0;
+   }
+}
+
+/* --------------------------------- md --------------------------------- */
+@media (min-width:992px) and (max-width:1199px) {
+   .rei-page-content .text-left-md {
+      text-align: left;
+   }
+   .rei-page-content .text-right-md {
+      text-align: right;
+   }
+}
+
+/* --------------------------------- sm --------------------------------- */
+@media (min-width:768px) and (max-width:991px) {
+   .rei-page-content .text-left-sm {
+      text-align: left;
+   }
+   .rei-page-content .text-right-sm {
+      text-align: right;
+   }
+   .rei-page-content .ohp-overlay-mobile, .rei-page-content .ohp-overlay-mobile.no-gutters {
+      margin-left: -3rem;
+      margin-right: -3rem;
+   }
+   .rei-page-content .ohp-h3-sm {
+      font-size: 2.4rem;
+   }
+
+   /* adjustments for nav and dotw at sm */
+   .rei-page-content .ohp-left-nav-brands .nav-gutters-l {
+      padding-left: .8rem;
+   }
+   .rei-page-content .ohp-left-nav-brands .nav-gutters-r {
+      padding-right: .8rem;
+   }
+   .rei-page-content *[class*="col-"].ohp-dotw-right {
+      padding-right: .8rem;
+   }
+   .rei-page-content *[class*="col-"].ohp-dotw-left {
+      padding-left: .8rem
+   }
+}
+
+/* --------------------------------- xs --------------------------------- */
+@media (max-width:767px) {
+
+   /* to center text at xs */
+   .rei-page-content .text-center-xs {
+      text-align: center;
+   }
+
+   /* use the overlay-mobile class on the row where you want full color bleed on xs */
+   .rei-page-content .ohp-overlay-mobile, .rei-page-content .ohp-overlay-mobile.no-gutters {
+      margin-left: -40px;
+      margin-right: -40px;
+      padding-right: 2rem;
+      padding-left: 2rem;
+   }
+
+   /* keeps gutterless paragraphs from hitting the column edges */
+   .rei-page-content .no-gutters p {
+      padding-right: 2rem;
+      padding-left: 2rem
+   }
+
+   /* dotd product image adjustment (doesn't fill full width at xs) */
+   .rei-page-content .ohp-dotd .ohp-product-tile .ohp-img-container {
+      padding-bottom: 80%;
+      overflow: hidden;
+      position: relative;
+   }
+   .rei-page-content .vertical-pull-md.ohp-dotw-shim {
+      margin-top: 2.6rem;
+   }
+   .rei-page-content .big-box-tiles .col-xs-6, .rei-page-content .recommendations-component .ohp-product-tile {
+      padding: 1.3rem;
+   }
+}
+
+/* --------------------------------- xxs --------------------------------- */
+@media (max-width:414px) {
+
+   /* adjustments for product tiles and dotw at xs */
+   .rei-page-content .big-box-tiles .col-xs-6, .rei-page-content .recommendations-component .ohp-product-tile {
+      padding: 1rem;
+   }
+   .rei-page-content *[class*="col-"].ohp-dotw-right {
+      padding-right: 1rem;
+   }
+   .rei-page-content *[class*="col-"].ohp-dotw-left {
+      padding-left: 1rem;
+   }
+   .rei-page-content .vertical-pull-md.ohp-dotw-shim {
+      margin-top: 2rem;
+   }
+}
+
+/* --------------------------------- split pane lead --------------------------------- */
+.rei-page-content .widget-split-pane .pane-group {
+   width: 100%;
+}
+.rei-page-content .widget-split-pane .pane-group .pane {
+   position: relative;
+   display: block;
+   float: none;
+   overflow: hidden;
+   vertical-align: middle;
+}
+.rei-page-content .widget-split-pane .pane-group .pane:first-child {
+   margin-top: 0;
+}
+.rei-page-content .widget-split-pane .pane-group .pane:last-child {
+   margin-bottom: 0;
+}
+@media (min-width:768px) {
+   .rei-page-content .widget-split-pane .pane-group .pane {
+      display: table-cell;
+      height: 100%;
+   }
+}
+@media screen and (min-width:768px) {
+   .rei-page-content .rei-page-content .widget-split-pane {
+      height: auto;
+   }
+   .rei-page-content .widget-split-pane .pane-group {
+      display: table;
+      table-layout: fixed;
+      height: 100%;
+   }
+   .rei-page-content .widget-split-pane {
+      height: auto;
+   }
+}
+@media screen and (max-width:767px) {
+   .rei-page-content .widget-split-pane .pane-group {
+      height: auto !important;
+   }
+}
+
+/* brand test with show/hide */
+.rei-page-content .otl-more-brands {
+   display: hidden;
+}

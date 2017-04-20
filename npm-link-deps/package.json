@@ -1,0 +1,45 @@
+{
+  "name": "npm-link-deps",
+  "version": "1.0.0",
+  "description": "Symlink modules in the \\`linkDependencies` array in the specified \"package.json\" file to the \"node_modules\" directory.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reidev/npm-link-deps.git"
+  },
+  "keywords": [
+    "npm",
+    "link",
+    "dependencies",
+    "symlink",
+    "windows"
+  ],
+  "author": "Rob McGuire-Dale <rmcguir@rei.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reidev/npm-link-deps/issues"
+  },
+  "homepage": "https://github.com/reidev/npm-link-deps",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-istanbul": "^0.5.0",
+    "gulp-mocha": "^2.0.0",
+    "lodash": "^2.4.1",
+    "mocha": "^2.0.1",
+    "node-uuid": "^1.4.2",
+    "proxyquire": "^1.1.0",
+    "should": "^4.3.1",
+    "sinon": "^1.12.1"
+  },
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.2.8"
+  }
+}

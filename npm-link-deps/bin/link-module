@@ -1,0 +1,23 @@
+#! /usr/bin/env node
+/**
+ * Command-line interface to make-module-link. Direct-link a module to the destination directory.
+ *
+ * Usage: link-module < module > [ destination_dir ] [ -f | --force ]
+ *
+ *     module           - The module you want to link (required)
+ *     destination_dir  - The destination path to link your module [ default: './node_modules' ]
+ *     -f, --force      - Force overwrite existing files [ default: false ]
+ */
+var path    = require( 'path' );
+var argv    = require( 'minimist' )( process.argv.slice( 2 ) );
+var mkdirp  = require( 'mkdirp' );
+var ln      = require( '../lib/link-module' );
+
+var module  = argv._[ 0 ];
+var destDir = argv._[ 1 ] || 'node_modules';
+var force   = argv.f || argv.force || false;
+
+destPath = path.resolve( destDir );
+mkdirp.sync( destDir );
+
+ln( module, destPath, force );

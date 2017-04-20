@@ -1,0 +1,19 @@
+#! /usr/bin/env node
+/**
+ * Direct link the modules in `linkDependencies` to the './node_modules' directory in the specified package.json file.
+ *
+ * Usage: link-dependencies [ package_file ] [ -u | --unlink ] [ -f | --force ]
+ *
+ *      package_file - The package file where the `linkDependencies` are [ default: "./package.json" ]
+ *      -u, --unlink - Unlink the `linkDependencies` instead [ default: false]
+ *      -f, --force  - Overwrite existing links and ignore unlink errors [ default: false ]
+ */
+var path    = require( 'path' );
+var argv    = require( 'minimist' )( process.argv.slice( 2 ) );
+var lnDeps  = require( '../lib/link-dependencies' );
+
+var pkgFile = argv._[ 0 ] || './package.json';
+var unlink  = argv.u || argv.unlink || false;
+var force   = argv.f || argv.force  || false;
+
+lnDeps( pkgFile, unlink, force );
